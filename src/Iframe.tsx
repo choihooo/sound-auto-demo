@@ -77,7 +77,6 @@ function Iframe() {
     if (!audioRef.current) {
       // audio 엘리먼트가 없으면 생성
       const audio = new Audio(trackUrl);
-      audio.loop = true;
       audioRef.current = audio;
       audio.play().catch((error) => {
         console.error("음악 재생 실패:", error);
