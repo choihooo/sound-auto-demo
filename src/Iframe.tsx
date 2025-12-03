@@ -20,13 +20,14 @@ function IframeStep1({
   navigate: () => void;
   onChangeTrack: () => void;
 }) {
-  useEffect(() => {
+  const handlePlay = () => {
     onChangeTrack();
-  }, [onChangeTrack]);
+  };
 
   return (
     <div>
       <h1>Iframe 1단계</h1>
+      <button onClick={handlePlay}>재생</button>
       <button onClick={navigate}>다음</button>
     </div>
   );
